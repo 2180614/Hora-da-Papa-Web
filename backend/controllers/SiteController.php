@@ -1,4 +1,5 @@
 <?php
+
 namespace backend\controllers;
 
 use Yii;
@@ -20,23 +21,23 @@ class SiteController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
+                'only' => ['login', 'index'],
                 'rules' => [
                     [
-                        'actions' => ['login', 'error'],
                         'allow' => true,
+                        'actions' => ['login'],
+                        'roles' => ['?'],
                     ],
                     [
-                        'actions' => ['logout', 'index'],
                         'allow' => true,
-                        'roles' => ['@'],
+                        'actions' => ['index', 'logout'],
+                        'roles' => ['admin'],
                     ],
                 ],
-            ],
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'logout' => ['post'],
-                ],
+                // Use this property to throw any message or set flash message 
+                /*  'denyCallback'  => function ($rule, $action) {
+                    \Yii::$app->session->setFlash('error', 'This section is only for registered users.');
+                } */
             ],
         ];
     }
