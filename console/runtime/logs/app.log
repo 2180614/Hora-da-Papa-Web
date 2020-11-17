@@ -1,0 +1,604 @@
+2020-11-11 16:13:39 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yii2advanced.auth_item' doesn't exist' in C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\db\Command.php:1293
+Stack trace:
+#0 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\db\Command.php(1293): PDOStatement->execute()
+#1 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\db\Command.php(1093): yii\db\Command->internalExecute('INSERT INTO `au...')
+#2 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\rbac\DbManager.php(286): yii\db\Command->execute()
+#3 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\rbac\BaseManager.php(133): yii\rbac\DbManager->addItem(Object(yii\rbac\Role))
+#4 C:\wamp64\www\Hora-da-Papa\console\migrations\m170124_084304_init_rbac.php(12): yii\rbac\BaseManager->add(Object(yii\rbac\Role))
+#5 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(727): m170124_084304_init_rbac->up()
+#6 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(202): yii\console\controllers\BaseMigrateController->migrateUp('m170124_084304_...')
+#7 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#8 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#9 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#10 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\console\Controller.php(179): yii\base\Controller->runAction('', Array)
+#11 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('', Array)
+#12 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#13 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#14 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#15 C:\wamp64\www\Hora-da-Papa\yii(23): yii\base\Application->run()
+#16 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yii2advanced.auth_item' doesn't exist
+The SQL being executed was: INSERT INTO `auth_item` (`name`, `type`, `description`, `rule_name`, `data`, `created_at`, `updated_at`) VALUES ('client', 1, NULL, NULL, NULL, 1605111219, 1605111219)' in C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\db\Schema.php:677
+Stack trace:
+#0 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\db\Command.php(1298): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO `au...')
+#1 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\db\Command.php(1093): yii\db\Command->internalExecute('INSERT INTO `au...')
+#2 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\rbac\DbManager.php(286): yii\db\Command->execute()
+#3 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\rbac\BaseManager.php(133): yii\rbac\DbManager->addItem(Object(yii\rbac\Role))
+#4 C:\wamp64\www\Hora-da-Papa\console\migrations\m170124_084304_init_rbac.php(12): yii\rbac\BaseManager->add(Object(yii\rbac\Role))
+#5 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(727): m170124_084304_init_rbac->up()
+#6 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(202): yii\console\controllers\BaseMigrateController->migrateUp('m170124_084304_...')
+#7 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#8 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#9 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#10 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\console\Controller.php(179): yii\base\Controller->runAction('', Array)
+#11 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('', Array)
+#12 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#13 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#14 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#15 C:\wamp64\www\Hora-da-Papa\yii(23): yii\base\Application->run()
+#16 {main}
+Additional Information:
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'yii2advanced.auth_item' doesn't exist
+)
+
+2020-11-11 16:13:36 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Dinis\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'DESKTOP-5V0C7Q2'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Dinis'
+    'JAVA_HOME' => 'C:\\Program Files\\Java\\jdk-15'
+    'LOCALAPPDATA' => 'C:\\Users\\Dinis\\AppData\\Local'
+    'LOGONSERVER' => '\\\\DESKTOP-5V0C7Q2'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OneDrive' => 'C:\\Users\\Dinis\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Program Files\\AdoptOpenJDK\\jdk-14.0.2.12-hotspot\\bin;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\wamp64\\bin\\php\\php5.6.40;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\ProgramData\\DockerDesktop\\version-bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\140\\DTS\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Users\\Dinis\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Dinis\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Dinis\\.dotnet\\tools;C:\\Users\\Dinis\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Dinis\\AppData\\Local\\GitHubDesktop\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 78 Stepping 3, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '4e03'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\Tools\\PowerShell\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\Dinis\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\Dinis\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'DESKTOP-5V0C7Q2'
+    'USERDOMAIN_ROAMINGPROFILE' => 'DESKTOP-5V0C7Q2'
+    'USERNAME' => 'Dinis'
+    'USERPROFILE' => 'C:\\Users\\Dinis'
+    'windir' => 'C:\\Windows'
+    'YII_PATH' => 'C:\\wamp64\\www\\Hora-da-Papa\\'
+    'PHP_SELF' => 'C:\\wamp64\\www\\Hora-da-Papa\\yii'
+    'SCRIPT_NAME' => 'C:\\wamp64\\www\\Hora-da-Papa\\yii'
+    'SCRIPT_FILENAME' => 'C:\\wamp64\\www\\Hora-da-Papa\\yii'
+    'PATH_TRANSLATED' => 'C:\\wamp64\\www\\Hora-da-Papa\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1605111215.9964
+    'REQUEST_TIME' => 1605111215
+    'argv' => [
+        0 => 'C:\\wamp64\\www\\Hora-da-Papa\\yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2020-11-17 15:37:24 [-][-][-][error][yii\console\Exception] exception 'yii\console\Exception' with message 'Unknown alias: -step. Aliases available: -h (--help), -C (--comment), -f (--fields), -p (--migrationPath), -t (--migrationTable), -F (--templateFile), -P (--useTablePrefix), -c (--compact)' in C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\console\Controller.php:134
+Stack trace:
+#0 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('', Array)
+#1 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#2 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#3 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#4 C:\wamp64\www\Hora-da-Papa\yii(23): yii\base\Application->run()
+#5 {main}
+2020-11-17 15:37:24 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Dinis\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'DESKTOP-5V0C7Q2'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'FPS_BROWSER_APP_PROFILE_STRING' => 'Internet Explorer'
+    'FPS_BROWSER_USER_PROFILE_STRING' => 'Default'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Dinis'
+    'JAVA_HOME' => 'C:\\Program Files\\Java\\jdk-15'
+    'LOCALAPPDATA' => 'C:\\Users\\Dinis\\AppData\\Local'
+    'LOGONSERVER' => '\\\\DESKTOP-5V0C7Q2'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OneDrive' => 'C:\\Users\\Dinis\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Program Files\\AdoptOpenJDK\\jdk-14.0.2.12-hotspot\\bin;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\wamp64\\bin\\php\\php5.6.40;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\ProgramData\\DockerDesktop\\version-bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\140\\DTS\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Users\\Dinis\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Dinis\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Dinis\\.dotnet\\tools;C:\\Users\\Dinis\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Dinis\\AppData\\Local\\GitHubDesktop\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 78 Stepping 3, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '4e03'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\Tools\\PowerShell\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\Dinis\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\Dinis\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'DESKTOP-5V0C7Q2'
+    'USERDOMAIN_ROAMINGPROFILE' => 'DESKTOP-5V0C7Q2'
+    'USERNAME' => 'Dinis'
+    'USERPROFILE' => 'C:\\Users\\Dinis'
+    'windir' => 'C:\\Windows'
+    'YII_PATH' => 'C:\\wamp64\\www\\Hora-da-Papa\\'
+    'PHP_SELF' => 'C:\\wamp64\\www\\Hora-da-Papa\\yii'
+    'SCRIPT_NAME' => 'C:\\wamp64\\www\\Hora-da-Papa\\yii'
+    'SCRIPT_FILENAME' => 'C:\\wamp64\\www\\Hora-da-Papa\\yii'
+    'PATH_TRANSLATED' => 'C:\\wamp64\\www\\Hora-da-Papa\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1605627444.7318
+    'REQUEST_TIME' => 1605627444
+    'argv' => [
+        0 => 'C:\\wamp64\\www\\Hora-da-Papa\\yii'
+        1 => 'migrate'
+        2 => '-step'
+        3 => '1'
+    ]
+    'argc' => 4
+]
+2020-11-17 15:55:45 [-][-][-][error][yii\db\IntegrityException] exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails' in C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\db\Command.php:1293
+Stack trace:
+#0 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\db\Command.php(1293): PDOStatement->execute()
+#1 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\db\Command.php(1093): yii\db\Command->internalExecute('DROP TABLE `ven...')
+#2 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\db\Migration.php(351): yii\db\Command->execute()
+#3 C:\wamp64\www\Hora-da-Papa\console\migrations\m201117_143635_AppDB.php(54): yii\db\Migration->dropTable('venda')
+#4 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(755): m201117_143635_AppDB->down()
+#5 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(264): yii\console\controllers\BaseMigrateController->migrateDown('m201117_143635_...')
+#6 [internal function]: yii\console\controllers\BaseMigrateController->actionDown('1')
+#7 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#9 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\console\Controller.php(179): yii\base\Controller->runAction('down', Array)
+#10 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('down', Array)
+#11 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate/down', Array)
+#12 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate/down', Array)
+#13 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#14 C:\wamp64\www\Hora-da-Papa\yii(23): yii\base\Application->run()
+#15 {main}
+
+Next exception 'yii\db\IntegrityException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails
+The SQL being executed was: DROP TABLE `venda`' in C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\db\Schema.php:677
+Stack trace:
+#0 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\db\Command.php(1298): yii\db\Schema->convertException(Object(PDOException), 'DROP TABLE `ven...')
+#1 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\db\Command.php(1093): yii\db\Command->internalExecute('DROP TABLE `ven...')
+#2 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\db\Migration.php(351): yii\db\Command->execute()
+#3 C:\wamp64\www\Hora-da-Papa\console\migrations\m201117_143635_AppDB.php(54): yii\db\Migration->dropTable('venda')
+#4 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(755): m201117_143635_AppDB->down()
+#5 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(264): yii\console\controllers\BaseMigrateController->migrateDown('m201117_143635_...')
+#6 [internal function]: yii\console\controllers\BaseMigrateController->actionDown('1')
+#7 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#9 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\console\Controller.php(179): yii\base\Controller->runAction('down', Array)
+#10 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('down', Array)
+#11 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate/down', Array)
+#12 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate/down', Array)
+#13 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#14 C:\wamp64\www\Hora-da-Papa\yii(23): yii\base\Application->run()
+#15 {main}
+Additional Information:
+Array
+(
+    [0] => 23000
+    [1] => 1451
+    [2] => Cannot delete or update a parent row: a foreign key constraint fails
+)
+
+2020-11-17 15:55:43 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Dinis\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'DESKTOP-5V0C7Q2'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'FPS_BROWSER_APP_PROFILE_STRING' => 'Internet Explorer'
+    'FPS_BROWSER_USER_PROFILE_STRING' => 'Default'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Dinis'
+    'JAVA_HOME' => 'C:\\Program Files\\Java\\jdk-15'
+    'LOCALAPPDATA' => 'C:\\Users\\Dinis\\AppData\\Local'
+    'LOGONSERVER' => '\\\\DESKTOP-5V0C7Q2'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OneDrive' => 'C:\\Users\\Dinis\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Program Files\\AdoptOpenJDK\\jdk-14.0.2.12-hotspot\\bin;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\wamp64\\bin\\php\\php5.6.40;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\ProgramData\\DockerDesktop\\version-bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\140\\DTS\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Users\\Dinis\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Dinis\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Dinis\\.dotnet\\tools;C:\\Users\\Dinis\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Dinis\\AppData\\Local\\GitHubDesktop\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 78 Stepping 3, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '4e03'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\Tools\\PowerShell\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\Dinis\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\Dinis\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'DESKTOP-5V0C7Q2'
+    'USERDOMAIN_ROAMINGPROFILE' => 'DESKTOP-5V0C7Q2'
+    'USERNAME' => 'Dinis'
+    'USERPROFILE' => 'C:\\Users\\Dinis'
+    'windir' => 'C:\\Windows'
+    'YII_PATH' => 'C:\\wamp64\\www\\Hora-da-Papa\\'
+    'PHP_SELF' => 'C:\\wamp64\\www\\Hora-da-Papa\\yii'
+    'SCRIPT_NAME' => 'C:\\wamp64\\www\\Hora-da-Papa\\yii'
+    'SCRIPT_FILENAME' => 'C:\\wamp64\\www\\Hora-da-Papa\\yii'
+    'PATH_TRANSLATED' => 'C:\\wamp64\\www\\Hora-da-Papa\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1605628543.8171
+    'REQUEST_TIME' => 1605628543
+    'argv' => [
+        0 => 'C:\\wamp64\\www\\Hora-da-Papa\\yii'
+        1 => 'migrate/down'
+        2 => '1'
+    ]
+    'argc' => 3
+]
+2020-11-17 15:59:03 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1051 Unknown table 'yii2advanced.utilizador'' in C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\db\Command.php:1293
+Stack trace:
+#0 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\db\Command.php(1293): PDOStatement->execute()
+#1 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\db\Command.php(1093): yii\db\Command->internalExecute('DROP TABLE `uti...')
+#2 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\db\Migration.php(351): yii\db\Command->execute()
+#3 C:\wamp64\www\Hora-da-Papa\console\migrations\m201117_143635_AppDB.php(53): yii\db\Migration->dropTable('utilizador')
+#4 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(755): m201117_143635_AppDB->down()
+#5 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(264): yii\console\controllers\BaseMigrateController->migrateDown('m201117_143635_...')
+#6 [internal function]: yii\console\controllers\BaseMigrateController->actionDown('1')
+#7 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#9 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\console\Controller.php(179): yii\base\Controller->runAction('down', Array)
+#10 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('down', Array)
+#11 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate/down', Array)
+#12 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate/down', Array)
+#13 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#14 C:\wamp64\www\Hora-da-Papa\yii(23): yii\base\Application->run()
+#15 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S02]: Base table or view not found: 1051 Unknown table 'yii2advanced.utilizador'
+The SQL being executed was: DROP TABLE `utilizador`' in C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\db\Schema.php:677
+Stack trace:
+#0 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\db\Command.php(1298): yii\db\Schema->convertException(Object(PDOException), 'DROP TABLE `uti...')
+#1 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\db\Command.php(1093): yii\db\Command->internalExecute('DROP TABLE `uti...')
+#2 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\db\Migration.php(351): yii\db\Command->execute()
+#3 C:\wamp64\www\Hora-da-Papa\console\migrations\m201117_143635_AppDB.php(53): yii\db\Migration->dropTable('utilizador')
+#4 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(755): m201117_143635_AppDB->down()
+#5 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(264): yii\console\controllers\BaseMigrateController->migrateDown('m201117_143635_...')
+#6 [internal function]: yii\console\controllers\BaseMigrateController->actionDown('1')
+#7 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#9 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\console\Controller.php(179): yii\base\Controller->runAction('down', Array)
+#10 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('down', Array)
+#11 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate/down', Array)
+#12 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate/down', Array)
+#13 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#14 C:\wamp64\www\Hora-da-Papa\yii(23): yii\base\Application->run()
+#15 {main}
+Additional Information:
+Array
+(
+    [0] => 42S02
+    [1] => 1051
+    [2] => Unknown table 'yii2advanced.utilizador'
+)
+
+2020-11-17 15:59:02 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Dinis\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'DESKTOP-5V0C7Q2'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'FPS_BROWSER_APP_PROFILE_STRING' => 'Internet Explorer'
+    'FPS_BROWSER_USER_PROFILE_STRING' => 'Default'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Dinis'
+    'JAVA_HOME' => 'C:\\Program Files\\Java\\jdk-15'
+    'LOCALAPPDATA' => 'C:\\Users\\Dinis\\AppData\\Local'
+    'LOGONSERVER' => '\\\\DESKTOP-5V0C7Q2'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OneDrive' => 'C:\\Users\\Dinis\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Program Files\\AdoptOpenJDK\\jdk-14.0.2.12-hotspot\\bin;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\wamp64\\bin\\php\\php5.6.40;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\ProgramData\\DockerDesktop\\version-bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\140\\DTS\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Users\\Dinis\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Dinis\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Dinis\\.dotnet\\tools;C:\\Users\\Dinis\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Dinis\\AppData\\Local\\GitHubDesktop\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 78 Stepping 3, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '4e03'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\Tools\\PowerShell\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\Dinis\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\Dinis\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'DESKTOP-5V0C7Q2'
+    'USERDOMAIN_ROAMINGPROFILE' => 'DESKTOP-5V0C7Q2'
+    'USERNAME' => 'Dinis'
+    'USERPROFILE' => 'C:\\Users\\Dinis'
+    'windir' => 'C:\\Windows'
+    'YII_PATH' => 'C:\\wamp64\\www\\Hora-da-Papa\\'
+    'PHP_SELF' => 'C:\\wamp64\\www\\Hora-da-Papa\\yii'
+    'SCRIPT_NAME' => 'C:\\wamp64\\www\\Hora-da-Papa\\yii'
+    'SCRIPT_FILENAME' => 'C:\\wamp64\\www\\Hora-da-Papa\\yii'
+    'PATH_TRANSLATED' => 'C:\\wamp64\\www\\Hora-da-Papa\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1605628742.1075
+    'REQUEST_TIME' => 1605628742
+    'argv' => [
+        0 => 'C:\\wamp64\\www\\Hora-da-Papa\\yii'
+        1 => 'migrate/down'
+        2 => '1'
+    ]
+    'argc' => 3
+]
+2020-11-17 15:59:57 [-][-][-][error][yii\db\IntegrityException] exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'client' for key 'PRIMARY'' in C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\db\Command.php:1293
+Stack trace:
+#0 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\db\Command.php(1293): PDOStatement->execute()
+#1 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\db\Command.php(1093): yii\db\Command->internalExecute('INSERT INTO `au...')
+#2 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\rbac\DbManager.php(286): yii\db\Command->execute()
+#3 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\rbac\BaseManager.php(133): yii\rbac\DbManager->addItem(Object(yii\rbac\Role))
+#4 C:\wamp64\www\Hora-da-Papa\console\migrations\m170124_084304_init_rbac.php(12): yii\rbac\BaseManager->add(Object(yii\rbac\Role))
+#5 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(727): m170124_084304_init_rbac->up()
+#6 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(202): yii\console\controllers\BaseMigrateController->migrateUp('m170124_084304_...')
+#7 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#8 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#9 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#10 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\console\Controller.php(179): yii\base\Controller->runAction('', Array)
+#11 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('', Array)
+#12 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#13 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#14 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#15 C:\wamp64\www\Hora-da-Papa\yii(23): yii\base\Application->run()
+#16 {main}
+
+Next exception 'yii\db\IntegrityException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'client' for key 'PRIMARY'
+The SQL being executed was: INSERT INTO `auth_item` (`name`, `type`, `description`, `rule_name`, `data`, `created_at`, `updated_at`) VALUES ('client', 1, NULL, NULL, NULL, 1605628797, 1605628797)' in C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\db\Schema.php:677
+Stack trace:
+#0 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\db\Command.php(1298): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO `au...')
+#1 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\db\Command.php(1093): yii\db\Command->internalExecute('INSERT INTO `au...')
+#2 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\rbac\DbManager.php(286): yii\db\Command->execute()
+#3 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\rbac\BaseManager.php(133): yii\rbac\DbManager->addItem(Object(yii\rbac\Role))
+#4 C:\wamp64\www\Hora-da-Papa\console\migrations\m170124_084304_init_rbac.php(12): yii\rbac\BaseManager->add(Object(yii\rbac\Role))
+#5 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(727): m170124_084304_init_rbac->up()
+#6 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(202): yii\console\controllers\BaseMigrateController->migrateUp('m170124_084304_...')
+#7 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#8 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#9 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#10 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\console\Controller.php(179): yii\base\Controller->runAction('', Array)
+#11 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('', Array)
+#12 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#13 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#14 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#15 C:\wamp64\www\Hora-da-Papa\yii(23): yii\base\Application->run()
+#16 {main}
+Additional Information:
+Array
+(
+    [0] => 23000
+    [1] => 1062
+    [2] => Duplicate entry 'client' for key 'PRIMARY'
+)
+
+2020-11-17 15:59:56 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Dinis\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'DESKTOP-5V0C7Q2'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'FPS_BROWSER_APP_PROFILE_STRING' => 'Internet Explorer'
+    'FPS_BROWSER_USER_PROFILE_STRING' => 'Default'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Dinis'
+    'JAVA_HOME' => 'C:\\Program Files\\Java\\jdk-15'
+    'LOCALAPPDATA' => 'C:\\Users\\Dinis\\AppData\\Local'
+    'LOGONSERVER' => '\\\\DESKTOP-5V0C7Q2'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OneDrive' => 'C:\\Users\\Dinis\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Program Files\\AdoptOpenJDK\\jdk-14.0.2.12-hotspot\\bin;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\wamp64\\bin\\php\\php5.6.40;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\ProgramData\\DockerDesktop\\version-bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\140\\DTS\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Users\\Dinis\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Dinis\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Dinis\\.dotnet\\tools;C:\\Users\\Dinis\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Dinis\\AppData\\Local\\GitHubDesktop\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 78 Stepping 3, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '4e03'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\Tools\\PowerShell\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\Dinis\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\Dinis\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'DESKTOP-5V0C7Q2'
+    'USERDOMAIN_ROAMINGPROFILE' => 'DESKTOP-5V0C7Q2'
+    'USERNAME' => 'Dinis'
+    'USERPROFILE' => 'C:\\Users\\Dinis'
+    'windir' => 'C:\\Windows'
+    'YII_PATH' => 'C:\\wamp64\\www\\Hora-da-Papa\\'
+    'PHP_SELF' => 'C:\\wamp64\\www\\Hora-da-Papa\\yii'
+    'SCRIPT_NAME' => 'C:\\wamp64\\www\\Hora-da-Papa\\yii'
+    'SCRIPT_FILENAME' => 'C:\\wamp64\\www\\Hora-da-Papa\\yii'
+    'PATH_TRANSLATED' => 'C:\\wamp64\\www\\Hora-da-Papa\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1605628796.3429
+    'REQUEST_TIME' => 1605628796
+    'argv' => [
+        0 => 'C:\\wamp64\\www\\Hora-da-Papa\\yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2020-11-17 16:01:05 [-][-][-][error][yii\base\UnknownMethodException] exception 'yii\base\UnknownMethodException' with message 'Calling unknown method: yii\db\mysql\ColumnSchemaBuilder::integer()' in C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\base\BaseObject.php:222
+Stack trace:
+#0 C:\wamp64\www\Hora-da-Papa\console\migrations\m201117_143635_AppDB.php(14): yii\base\BaseObject->__call('integer', Array)
+#1 C:\wamp64\www\Hora-da-Papa\console\migrations\m201117_143635_AppDB.php(14): yii\db\mysql\ColumnSchemaBuilder->integer()
+#2 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(727): m201117_143635_AppDB->up()
+#3 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(202): yii\console\controllers\BaseMigrateController->migrateUp('m201117_143635_...')
+#4 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#5 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#6 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#7 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\console\Controller.php(179): yii\base\Controller->runAction('', Array)
+#8 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('', Array)
+#9 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#10 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#11 C:\wamp64\www\Hora-da-Papa\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#12 C:\wamp64\www\Hora-da-Papa\yii(23): yii\base\Application->run()
+#13 {main}
+2020-11-17 16:01:04 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Dinis\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'DESKTOP-5V0C7Q2'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'FPS_BROWSER_APP_PROFILE_STRING' => 'Internet Explorer'
+    'FPS_BROWSER_USER_PROFILE_STRING' => 'Default'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Dinis'
+    'JAVA_HOME' => 'C:\\Program Files\\Java\\jdk-15'
+    'LOCALAPPDATA' => 'C:\\Users\\Dinis\\AppData\\Local'
+    'LOGONSERVER' => '\\\\DESKTOP-5V0C7Q2'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OneDrive' => 'C:\\Users\\Dinis\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Program Files\\AdoptOpenJDK\\jdk-14.0.2.12-hotspot\\bin;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\wamp64\\bin\\php\\php5.6.40;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\ProgramData\\DockerDesktop\\version-bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\140\\DTS\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Users\\Dinis\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Dinis\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Dinis\\.dotnet\\tools;C:\\Users\\Dinis\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Dinis\\AppData\\Local\\GitHubDesktop\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 78 Stepping 3, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '4e03'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\Tools\\PowerShell\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\Dinis\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\Dinis\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'DESKTOP-5V0C7Q2'
+    'USERDOMAIN_ROAMINGPROFILE' => 'DESKTOP-5V0C7Q2'
+    'USERNAME' => 'Dinis'
+    'USERPROFILE' => 'C:\\Users\\Dinis'
+    'windir' => 'C:\\Windows'
+    'YII_PATH' => 'C:\\wamp64\\www\\Hora-da-Papa\\'
+    'PHP_SELF' => 'C:\\wamp64\\www\\Hora-da-Papa\\yii'
+    'SCRIPT_NAME' => 'C:\\wamp64\\www\\Hora-da-Papa\\yii'
+    'SCRIPT_FILENAME' => 'C:\\wamp64\\www\\Hora-da-Papa\\yii'
+    'PATH_TRANSLATED' => 'C:\\wamp64\\www\\Hora-da-Papa\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1605628864.3205
+    'REQUEST_TIME' => 1605628864
+    'argv' => [
+        0 => 'C:\\wamp64\\www\\Hora-da-Papa\\yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
