@@ -312,6 +312,7 @@ class ComposerStaticInitbb7423a8a8fcdf84861d97663f788f8a
         'Codeception\\Util\\HttpCode' => __DIR__ . '/..' . '/codeception/lib-innerbrowser/src/Codeception/Util/HttpCode.php',
         'Codeception\\Util\\Shared\\Asserts' => __DIR__ . '/..' . '/codeception/lib-asserts/src/Codeception/Util/Shared/Asserts.php',
         'Codeception\\Util\\Shared\\InheritedAsserts' => __DIR__ . '/..' . '/codeception/lib-asserts/src/Codeception/Util/Shared/InheritedAsserts.php',
+        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'DivisionByZeroError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/DivisionByZeroError.php',
         'Error' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/Error.php',
         'File_Iterator' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Iterator.php',
