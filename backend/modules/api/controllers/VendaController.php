@@ -6,7 +6,7 @@ use yii\rest\ActiveController;
 use yii\filters\auth\HttpBasicAuth;
 use common\models\User;
 
-class PratoController extends ActiveController
+class VendaController extends ActiveController
 {
     public function behaviors()
     {
@@ -25,9 +25,9 @@ class PratoController extends ActiveController
         }
     }
 
-    public $modelClass = 'app\models\Prato';
+    public $modelClass = 'app\models\Venda';
 
-    //http://localhost/Hora-da-Papa-Web/backend/web/api/prato
+    //http://localhost/Hora-da-Papa-Web/backend/web/api/venda
     public function actionIndex()
     {
         $model = new $this->modelClass;
@@ -38,18 +38,18 @@ class PratoController extends ActiveController
     public function actionAdd()
     {
         $model = new $this->modelClass;
-        $model->nome = \Yii::$app->request->post('nome');
-        $model->categoria = \Yii::$app->request->post('categoria');
-        $model->descricao = \Yii::$app->request->post('descricao');
+        $model->user_id = \Yii::$app->request->post('user_id');
+        $model->takeaway = \Yii::$app->request->post('takeaway');
+        $model->mesa = \Yii::$app->request->post('mesa');
         $model->preco = \Yii::$app->request->post('preco');
-        $model->imagem = \Yii::$app->request->post('imagem');
+        $model->data_entrada = \Yii::$app->request->post('data_entrada');
+        $model->data_saida = \Yii::$app->request->post('data_saida');
 
         $ret = $model->save();
 
-        if ($ret) {
+        if ($ret)
             return 'Saved';
-            $this->FazPublish('MESSAGE', 'Novo Prato');
-        } else {
+        else {
             $err = json_encode($model->getErrors());
             throw new \yii\web\HttpException(422, $err);
         }
@@ -66,21 +66,5 @@ class PratoController extends ActiveController
         }
         \Yii::$app->response->statusCode = 404;
         return ['code' => 'error'];
-    }
-
-    public function FazPublish($canal, $msg)
-    {
-        $server = "127.0.0.1";
-        $port = 1883;
-        $username = ""; // set your username
-        $password = ""; // set your password
-        $client_id = "phpMQTT-publisher"; // unique!
-        $mqtt = new \app\mosquitto\phpMQTT($server, $port, $client_id);
-        if ($mqtt->connect(true, NULL, $username, $password)) {
-            $mqtt->publish($canal, $msg, 0);
-            $mqtt->close();
-        } else {
-            file_put_contents("debug.output", "Time out!");
-        }
     }
 }
